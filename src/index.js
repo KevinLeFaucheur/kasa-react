@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import './index.css';
+import { GlobalStyles } from './style/GlobalStyles';
 
 import { Home } from './pages/Home/Home';
 import { Lodging } from './pages/Lodging/Lodging';
@@ -14,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyles />
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
