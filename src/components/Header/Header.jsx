@@ -9,7 +9,6 @@ export const Header = () => {
     return (
         <StyledHeader>
             <KasaLogo />
-            <svg />
             <Nav>
                 <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'inactive')} end>Accueil</NavLink>
                 <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : 'inactive')}>A Propos</NavLink>
