@@ -1,14 +1,19 @@
 import { Nav } from '../Nav/Nav.styled' 
-import { Link } from '../Link/Link.styled'
+import { NavLink } from '../Link/Link.styled'
+import { StyledHeader } from './Header.styled'
+import { KasaLogo } from '../../style/logo'
+// import { NavLink } from 'react-router-dom';
 
-export const Header = () => {
+export const Header = () => {  
+
     return (
-        <div>
-            <img src="../public/images/logo.png" alt="Kasa logo" className="logo"/>
+        <StyledHeader>
+            <KasaLogo />
+            <svg />
             <Nav>
-                <Link to='/'>Accueil</Link>
-                <Link to='/about'>A Propos</Link>
+                <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'inactive')} end>Accueil</NavLink>
+                <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : 'inactive')}>A Propos</NavLink>
             </Nav>
-        </div>
+        </StyledHeader>
     )
 }

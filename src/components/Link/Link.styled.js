@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../style/colors'
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)
+`
     /* position: absolute;
     left: 75.08%;
     right: 13.95%;
@@ -18,6 +19,11 @@ const StyledLink = styled(Link)`
     align-items: flex-end;
     text-align: right; */
 
+    
+    &:inactive{
+        text-decoration-line: none;
+    }
+
     &:active{
         text-decoration-line: underline;
     }
@@ -25,4 +31,4 @@ const StyledLink = styled(Link)`
     color: ${colors.primary};
 `
 
-export { StyledLink as Link };
+export { StyledLink as NavLink };
