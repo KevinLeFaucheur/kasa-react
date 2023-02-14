@@ -1,8 +1,9 @@
 import { Nav } from '../Nav/Nav.styled' 
-import { NavLink } from '../Link/Link.styled'
+import { StyledNavLink } from '../NavLink/NavLink.styled'
+// import { NavLink } from 'react-router-dom';
 import { StyledHeader } from './Header.styled'
 import { KasaLogo } from '../../style/logo'
-// import { NavLink } from 'react-router-dom';
+import colors from '../../style/colors';
 
 export const Header = () => {  
 
@@ -10,8 +11,8 @@ export const Header = () => {
         <StyledHeader>
             <KasaLogo />
             <Nav>
-                <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'inactive')} end>Accueil</NavLink>
-                <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : 'inactive')}>A Propos</NavLink>
+                <StyledNavLink to='/'>Accueil</StyledNavLink>
+                <StyledNavLink to='/about'>A Propos</StyledNavLink>
             </Nav>
         </StyledHeader>
     )

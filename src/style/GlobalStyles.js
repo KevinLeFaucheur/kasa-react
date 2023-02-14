@@ -9,7 +9,15 @@ export const GlobalStyles = createGlobalStyle`
         padding: 40px 100px;
     }
 
-    a:visited {
+    /* a:visited {
         color: ${colors.primary};
+    }*/
+
+    a, a:link, a:visited, a:focus, a:hover{
+        text-decoration: none;
     }
+
+    /*a:active {
+        text-decoration: underline;
+    } */
 `
