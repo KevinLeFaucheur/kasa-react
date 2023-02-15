@@ -2,11 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import colors from './colors'
 
 export const GlobalStyles = createGlobalStyle`
+    *{
+        box-sizing: border-box;
+    }
+
     body {
         font-family: 'Montserrat', sans-serif;
         color: ${colors.primary};
-        margin: 0;
-        padding: 40px 100px;
+        min-height: 100%;
+        margin: 40px 100px;
+        /* padding: ; */
     }
 
     /* a:visited {
