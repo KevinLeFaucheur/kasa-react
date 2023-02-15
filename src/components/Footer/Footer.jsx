@@ -5,7 +5,7 @@ import { KasaLogo } from "../KasaLogo/KasaLogo";
 const StyledFooter = styled.footer`
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -209px;
     width: 100%;
     height: 209px;
     background-color: ${ colors.backgroundFooter };
