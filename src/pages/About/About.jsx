@@ -1,6 +1,7 @@
-import Collapse from '../../components/Collapse/Collapse'
+import { Collapse } from '../../components/Collapse/Collapse'
 import styled from 'styled-components';
 import image from '../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
+import about from '../../data/about.json'
 
 const Banner = styled.div`
   height: 223px;
@@ -14,7 +15,9 @@ export const About = () => {
   return (
     <div className="About">
       <Banner />
-      {/* <Collapse /> */}
+      {about.map((block, index) => {
+        return <Collapse key={index} title={block.title} textBody={block.text}/> 
+      })}
     </div>
   );
 };
