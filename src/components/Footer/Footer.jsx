@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import colors from "../../style/colors";
-import { KasaLogo } from "../../style/logo";
+import { KasaLogo } from "../KasaLogo/KasaLogo";
 
 const StyledFooter = styled.footer`
     position: absolute;
@@ -24,7 +24,7 @@ const StyledCopyright = styled.p`
 export const Footer = () => {
     return (
         <StyledFooter>
-            <KasaLogo />
+            <KasaLogo color={colors.fontLight}/>
             <StyledCopyright>© 2020 Kasa. All rights reserved</StyledCopyright>
         </StyledFooter>
     )
