@@ -40,7 +40,6 @@ export const Collapse = ({title, textBody}) => {
     const [collapseState, setCollapseState] = useState(false);
 
     const handleCollapseClick = () => {
-        console.log(collapseState)
         setCollapseState(!collapseState);
     }
 
