@@ -32,6 +32,7 @@ const LodgingLeftWrapper = styled.div`
 const LodgingRightWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `
 
 const LodgingBody = styled.div`

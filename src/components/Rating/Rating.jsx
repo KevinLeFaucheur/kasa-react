@@ -13,8 +13,8 @@ export const Rating = ({ rating }) => {
         <RatingWrapper>
             {[...Array(5)].map((_, index) => {
                 console.log(rating)
-                return rating > index ? <FontAwesomeIcon key={index} icon={faStar}/> 
-                                      : <FontAwesomeIcon key={index} icon={faStarRegular} />
+                return rating > index ? <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStar}/> 
+                                      : <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStarRegular} />
             })}
         </RatingWrapper>
     )
