@@ -43,13 +43,23 @@ export const Collapse = ({title, textBody}) => {
         setCollapseState(!collapseState);
     }
 
+    const text = typeof(textBody) === 'object' 
+                            ? Object.values(textBody)
+                            : textBody;
+
     return (
         <CollapseWrapper>
             <CollapseHeader onClick={handleCollapseClick}>
                 <CollapseH3>{title}</CollapseH3>
                 <FontAwesomeIcon icon={faAngleUp} />
             </CollapseHeader>
-            <CollapseBody isOpen={collapseState}>{textBody}</CollapseBody>
+            <CollapseBody isOpen={collapseState}>
+                <ul style={{ listStyle: 'none' }}>
+                    {typeof(text) === 'string' ?
+                        <li>{text}</li> :
+                        text.map((element, index) => <li key={index}>{element}</li>)}
+                </ul>
+            </CollapseBody>
         </CollapseWrapper>
     )
 }

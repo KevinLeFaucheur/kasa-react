@@ -12,7 +12,6 @@ export const Rating = ({ rating }) => {
     return (
         <RatingWrapper>
             {[...Array(5)].map((_, index) => {
-                console.log(rating)
                 return rating > index ? <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStar}/> 
                                       : <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStarRegular} />
             })}

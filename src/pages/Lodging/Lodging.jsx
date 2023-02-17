@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import image from '../../images/accomodation-1-3.jpg';
 import { Collapse } from "../../components/Collapse/Collapse";
 import { Tag } from "../../components/Tag/Tag";
 import { Rating } from "../../components/Rating/Rating";
