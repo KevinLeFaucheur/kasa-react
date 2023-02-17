@@ -10,7 +10,8 @@ const CollapseWrapper = styled.div`
 
 const CollapseHeader = styled.div`
     height: 48px;
-    margin: 0 17.5%;
+    width: 100%;
+    /* margin: 0 17.5%; */
     padding: 0 1.5rem;
     background-color: ${colors.primary};
     display: flex;
@@ -21,7 +22,7 @@ const CollapseHeader = styled.div`
 `
 
 const CollapseBody = styled.div`
-    margin: 0 17.5%;
+    /* margin: 0 17.5%; */
     padding: 2rem 1rem 1rem;
     font-size: 24px;
     font-weight: 400;
@@ -36,7 +37,7 @@ const CollapseH3 = styled.h3`
     margin: 0;
 `
 
-export const Collapse = ({title, textBody}) => {
+export const Collapse = ({title, textBody, width}) => {
     const [collapseState, setCollapseState] = useState(false);
 
     const handleCollapseClick = () => {

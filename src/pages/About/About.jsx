@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import image from '../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../../data/about.json'
 
+const AboutWrapper = styled.div`
+  padding: 0 17.5%;
+  height: 100%;
+`
+
 const Banner = styled.div`
   height: 223px;
   margin-bottom: 2rem;
@@ -14,11 +19,13 @@ const Banner = styled.div`
 
 export const About = () => {
   return (
-    <div className="About">
+    <div className='About'>
       <Banner />
-      {about.map((block, index) => {
-        return <Collapse key={index} title={block.title} textBody={block.text}/> 
-      })}
+      <AboutWrapper>
+        {about.map((block, index) => {
+          return <Collapse key={index} title={block.title} textBody={block.text}/> 
+        })}
+      </AboutWrapper>
     </div>
   );
 };

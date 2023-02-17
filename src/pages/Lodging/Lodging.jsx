@@ -39,6 +39,7 @@ const LodgingRightWrapper = styled.div`
 const LodgingBody = styled.div`
   display: flex;
   justify-content: space-between;
+  flex: 1 1 80%;
 `
 
 const TagWrapper = styled.div`

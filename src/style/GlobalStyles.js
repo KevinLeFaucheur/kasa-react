@@ -8,12 +8,12 @@ export const GlobalStyles = createGlobalStyle`
 
     html {
         position: relative;
+        height: 100%;
     }
 
     body {
         font-family: 'Montserrat', sans-serif;
         color: ${colors.primary};
-        min-height: 100%;
         margin: 40px 100px;
     }
 
