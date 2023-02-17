@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import image from '../../images/accomodation-1-3.jpg';
-import colors from "../../style/colors";
 import { Collapse } from "../../components/Collapse/Collapse";
 import { Tag } from "../../components/Tag/Tag";
 import { Rating } from "../../components/Rating/Rating";
 import { Profile } from "../../components/Profile/Profile";
+
+import logements from '../../data/logements.json';
+const props = logements[0];
 
 const LodgingWrapper = styled.div`
   display: flex;
@@ -47,25 +49,23 @@ const TagWrapper = styled.div`
 export const Lodging = () => {
     return (
       <LodgingWrapper>
-        <LodgingBanner src={image} alt={'text'} />
+        <LodgingBanner src={props.cover} alt={props.title} />
         <LodgingHeader>
           <LodgingLeftWrapper> 
-            <h2>Cozy loft on the Canal Saint-Martin</h2>
-            <p>Paris, Île-de-France</p>
+            <h2>{props.title}</h2>
+            <p>{props.location}</p>
             <TagWrapper>
-              <Tag tagName='Cozy'></Tag>
-              <Tag tagName='Canal'/>
-              <Tag tagName='Paris 10'/>
+              {props.tags.map(tag => <Tag key={tag} tagName={tag}></Tag>)}
             </TagWrapper>
           </LodgingLeftWrapper>
           <LodgingRightWrapper>
-              <Profile name={'Alexandre Dumas'} picture='' />
-              <Rating rating={3} />
+              <Profile name={props.host.name} picture={props.host.picture} />
+              <Rating rating={props.rating} />
           </LodgingRightWrapper>
         </LodgingHeader>
         <LodgingBody>
-          <Collapse key={'1'} title={'Description'} textBody={`Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied).`} />
-          <Collapse key={'2'} title={'Équipements'} textBody={`Climatisation Wi-Fi Cuisine Espace de travail Fer à repasser Sèche-cheveux Cintres`} />
+          <Collapse key={'desc'} title={'Description'} textBody={props.description} />
+          <Collapse key={'equip'} title={'Équipements'} textBody={props.equipments} />
         </LodgingBody>
       </LodgingWrapper>
     );

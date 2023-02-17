@@ -23,7 +23,7 @@ export const Profile = ({ name, picture }) => {
     return (
         <ProfileContainer>
             <ProfileName>{name}</ProfileName>
-            <ProfilePicture src={picture} alt="${name}'s profile picture"/>
+            <ProfilePicture src={picture} alt={`${name}'s profile picture`}/>
         </ProfileContainer>
     )
 }
