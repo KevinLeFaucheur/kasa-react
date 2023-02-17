@@ -5,7 +5,7 @@ import { Rating } from "../../components/Rating/Rating";
 import { Profile } from "../../components/Profile/Profile";
 
 import logements from '../../data/logements.json';
-const props = logements[0];
+import { useParams } from "react-router-dom";
 
 const LodgingWrapper = styled.div`
   display: flex;
@@ -47,26 +47,30 @@ const TagWrapper = styled.div`
 `
 
 export const Lodging = () => {
-    return (
-      <LodgingWrapper>
-        <LodgingBanner src={props.cover} alt={props.title} />
-        <LodgingHeader>
-          <LodgingLeftWrapper> 
-            <h2>{props.title}</h2>
-            <p>{props.location}</p>
-            <TagWrapper>
-              {props.tags.map(tag => <Tag key={tag} tagName={tag}></Tag>)}
-            </TagWrapper>
-          </LodgingLeftWrapper>
-          <LodgingRightWrapper>
-              <Profile name={props.host.name} picture={props.host.picture} />
-              <Rating rating={props.rating} />
-          </LodgingRightWrapper>
-        </LodgingHeader>
-        <LodgingBody>
-          <Collapse key={'desc'} title={'Description'} textBody={props.description} />
-          <Collapse key={'equip'} title={'Équipements'} textBody={props.equipments} />
-        </LodgingBody>
-      </LodgingWrapper>
-    );
+  const { id } = useParams();
+
+  const logement = logements.find(logement => logement.id === id);
+
+  return (
+    <LodgingWrapper>
+      <LodgingBanner src={logement.cover} alt={logement.title} />
+      <LodgingHeader>
+        <LodgingLeftWrapper> 
+          <h2>{logement.title}</h2>
+          <p>{logement.location}</p>
+          <TagWrapper>
+            {logement.tags.map(tag => <Tag key={tag} tagName={tag}></Tag>)}
+          </TagWrapper>
+        </LodgingLeftWrapper>
+        <LodgingRightWrapper>
+            <Profile name={logement.host.name} picture={logement.host.picture} />
+            <Rating rating={logement.rating} />
+        </LodgingRightWrapper>
+      </LodgingHeader>
+      <LodgingBody>
+        <Collapse key={'desc'} title={'Description'} textBody={logement.description} />
+        <Collapse key={'equip'} title={'Équipements'} textBody={logement.equipments} />
+      </LodgingBody>
+    </LodgingWrapper>
+  );
 };
