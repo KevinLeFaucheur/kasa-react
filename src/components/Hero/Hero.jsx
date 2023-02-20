@@ -27,6 +27,10 @@ const HeroTitle = styled.h1`
     color: white;
     font-size: 48px;
     font-weight: 500;
+        
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `
 
 export const Hero = () => {

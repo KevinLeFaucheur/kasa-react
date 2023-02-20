@@ -1,8 +1,20 @@
-import { Hero } from '../../components/Hero/Hero.styled'
-import { Gallery } from '../../components/Gallery/Gallery.styled';
-import { Thumb } from '../../components/Thumb/Thumb';
+import styled from "styled-components";
+import colors from "../../style/colors";
 import logements from '../../data/logements.json';
+
+import { Hero } from '../../components/Hero/Hero'
+import { Thumb } from '../../components/Thumb/Thumb';
 import { Link } from 'react-router-dom';
+
+const Gallery = styled.div`
+    width: 100%;
+    background: ${colors.backgroundLight};
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 56px 50px;
+`
 
 export const Home = () => {
   return (

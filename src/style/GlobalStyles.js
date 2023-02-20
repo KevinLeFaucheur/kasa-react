@@ -15,6 +15,10 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         color: ${colors.primary};
         margin: 40px 100px;
+        
+        @media (max-width: 768px) {
+            margin: 1rem;
+        }
     }
 
     a, a:link, a:visited, a:focus, a:hover{
