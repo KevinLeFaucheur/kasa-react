@@ -19,6 +19,7 @@ const CollapseHeader = styled.div`
     align-items: center;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 `
 
 const CollapseBody = styled.div`

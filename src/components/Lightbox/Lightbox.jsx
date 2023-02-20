@@ -18,6 +18,7 @@ const Button = styled.button`
     color: white;
     font-size: 5rem;
     font-weight: 400;
+    cursor: pointer;
 `
 
 const PageIndex = styled.div`
