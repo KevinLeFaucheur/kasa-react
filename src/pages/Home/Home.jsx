@@ -11,8 +11,8 @@ export const Home = () => {
       <Gallery>
         {logements.map(lodging => {
           const { id, title, cover } = lodging;
-          return  <Link to={`/lodging/${id}`}>
-                    <Thumb key={id} title={title} cover={cover}/>
+          return  <Link key={id} to={`/lodging/${id}`}>
+                    <Thumb title={title} cover={cover}/>
                   </Link>
         })}
       </Gallery>

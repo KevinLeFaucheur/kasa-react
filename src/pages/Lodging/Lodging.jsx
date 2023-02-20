@@ -6,6 +6,7 @@ import { Profile } from "../../components/Profile/Profile";
 
 import logements from '../../data/logements.json';
 import { useParams } from "react-router-dom";
+import { Lightbox } from "../../components/Lightbox/Lightbox";
 
 const LodgingWrapper = styled.div`
   display: flex;
@@ -53,7 +54,7 @@ export const Lodging = () => {
 
   return (
     <LodgingWrapper>
-      <LodgingBanner src={logement.cover} alt={logement.title} />
+      <Lightbox imageArray={logement.pictures} />
       <LodgingHeader>
         <LodgingLeftWrapper> 
           <h2>{logement.title}</h2>
