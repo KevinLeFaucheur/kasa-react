@@ -1,23 +1,18 @@
 import styled from "styled-components";
+import { useEffect } from "react";
+import { redirect, useNavigate, useParams } from "react-router-dom";
+
 import { Collapse } from "../../components/Collapse/Collapse";
 import { Tag } from "../../components/Tag/Tag";
 import { Rating } from "../../components/Rating/Rating";
 import { Profile } from "../../components/Profile/Profile";
+import { Lightbox } from "../../components/Lightbox/Lightbox";
 
 import logements from '../../data/logements.json';
-import { useParams } from "react-router-dom";
-import { Lightbox } from "../../components/Lightbox/Lightbox";
 
 const LodgingWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
-
-const LodgingBanner = styled.img`
-  width: 100%;
-  margin-bottom: 2rem;
-  border-radius: 25px;
-  object-fit: cover;
 `
 
 const LodgingHeader = styled.div`
@@ -49,10 +44,15 @@ const TagWrapper = styled.div`
 
 export const Lodging = () => {
   const { id } = useParams();
-
   const logement = logements.find(logement => logement.id === id);
 
-  return (
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(logement === undefined) navigate('/')
+  });
+
+  return logement && (
     <LodgingWrapper>
       <Lightbox imageArray={logement.pictures} />
       <LodgingHeader>
