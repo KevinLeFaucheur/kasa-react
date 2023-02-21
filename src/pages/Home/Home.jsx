@@ -7,13 +7,25 @@ import { Thumb } from '../../components/Thumb/Thumb';
 import { Link } from 'react-router-dom';
 
 const Gallery = styled.div`
+  width: 100%;
+  background: ${colors.backgroundLight};
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 56px 50px;
+
+  @media (max-width: 768px) {
+    background: none;
+    padding: 0;
+  }
+`
+
+const StyledLink = styled(Link)`
+  width: 31%;
+  @media (max-width: 768px) {
     width: 100%;
-    background: ${colors.backgroundLight};
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 56px 50px;
+  }
 `
 
 export const Home = () => {
@@ -23,9 +35,9 @@ export const Home = () => {
       <Gallery>
         {logements.map(lodging => {
           const { id, title, cover } = lodging;
-          return  <Link key={id} to={`/lodging/${id}`}>
+          return  <StyledLink key={id} to={`/lodging/${id}`}>
                     <Thumb title={title} cover={cover}/>
-                  </Link>
+                  </StyledLink>
         })}
       </Gallery>
     </div>

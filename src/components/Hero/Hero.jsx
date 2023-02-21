@@ -14,6 +14,10 @@ const HeroBackground = styled.img`
     border-radius: 25px;
     object-fit: cover;
     filter: brightness(70%);
+        
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 const HeroTitle = styled.h1`
@@ -29,7 +33,7 @@ const HeroTitle = styled.h1`
     font-weight: 500;
         
     @media (max-width: 768px) {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 `
 

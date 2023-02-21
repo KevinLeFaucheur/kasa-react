@@ -8,23 +8,32 @@ const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 68px;
     margin-bottom: 5vh;
+        
+    @media (max-width: 768px) {
+        /* height: 32px; */
+    }
 `
 
 const Nav = styled.nav`
-    width: 309px;
     height: 34px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
 
 const StyledNavLink = styled(NavLink)`
 
     font-size: 24px;
+    margin-left: 3rem;
     color: ${colors.primary};
     &.active{
         text-decoration: underline;
+    }
+        
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-left: 1.5rem;
     }
 `
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LogoContainer = styled.div`
     width: 210px;
-    height: 68px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
