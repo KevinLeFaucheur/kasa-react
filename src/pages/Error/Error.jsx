@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../style/colors";
 
-const ErrorContainer = styled.div`
+const ErrorWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0 100px;
 `
 
 const ErrorTitle = styled.h1`
@@ -47,10 +48,10 @@ const ErrorLink = styled(Link)`
 
 export const Error = () => {
     return (
-        <ErrorContainer>
+        <ErrorWrapper>
             <ErrorTitle>404</ErrorTitle>
             <ErrorMessage>Oups! La page que vous demandez n'existe pas.</ErrorMessage>
             <ErrorLink to='/'>Retourner sur la page d’accueil</ErrorLink>
-        </ErrorContainer>
+        </ErrorWrapper>
     );
 };  

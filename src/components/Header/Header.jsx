@@ -8,7 +8,8 @@ const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5vh;
+    margin: 0 100px;
+    padding: 5vh 0 5vh;
         
     @media (max-width: 768px) {
         /* height: 32px; */

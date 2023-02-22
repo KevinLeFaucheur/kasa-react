@@ -6,6 +6,11 @@ import { Hero } from '../../components/Hero/Hero'
 import { Thumb } from '../../components/Thumb/Thumb';
 import { Link } from 'react-router-dom';
 
+const HomeWrapper = styled.div`
+  margin: 0 100px;
+  margin-bottom: 3rem;
+`
+
 const Gallery = styled.div`
   width: 100%;
   background: ${colors.backgroundLight};
@@ -30,7 +35,7 @@ const StyledLink = styled(Link)`
 
 export const Home = () => {
   return (
-    <div className="Home">
+    <HomeWrapper>
       <Hero />
       <Gallery>
         {logements.map(lodging => {
@@ -40,6 +45,6 @@ export const Home = () => {
                   </StyledLink>
         })}
       </Gallery>
-    </div>
+    </HomeWrapper>
   );
 };

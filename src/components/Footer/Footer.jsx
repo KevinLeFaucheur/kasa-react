@@ -3,11 +3,9 @@ import colors from "../../style/colors";
 import { KasaLogo } from "../KasaLogo/KasaLogo";
 
 const StyledFooter = styled.footer`
-    position: absolute;
-    left: 0;
-    /* bottom: 0; */
     width: 100%;
     height: 209px;
+    margin-top: auto;
     background-color: ${ colors.backgroundFooter };
     display: flex;
     flex-direction: column;

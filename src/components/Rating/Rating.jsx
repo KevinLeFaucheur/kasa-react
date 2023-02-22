@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const RatingWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
 `
 
 export const Rating = ({ rating }) => {

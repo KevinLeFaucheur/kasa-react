@@ -6,6 +6,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const CollapseWrapper = styled.div`
     margin-bottom: 2rem;
+    width: 100%;
 `
 
 const CollapseHeader = styled.div`

@@ -13,29 +13,47 @@ import logements from '../../data/logements.json';
 const LodgingWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 100px;
 `
 
-const LodgingHeader = styled.div`
+const LodgingHead = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
 `
 
 const LodgingLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
 `
 
 const LodgingRightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+  }
 `
 
 const LodgingBody = styled.div`
   display: flex;
   justify-content: space-between;
-  flex: 1 1 80%;
+  column-gap: 6%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const TagWrapper = styled.div`
@@ -55,7 +73,7 @@ export const Lodging = () => {
   return logement && (
     <LodgingWrapper>
       <Lightbox imageArray={logement.pictures} />
-      <LodgingHeader>
+      <LodgingHead>
         <LodgingLeftWrapper> 
           <h2>{logement.title}</h2>
           <p>{logement.location}</p>
@@ -67,7 +85,7 @@ export const Lodging = () => {
             <Profile name={logement.host.name} picture={logement.host.picture} />
             <Rating rating={logement.rating} />
         </LodgingRightWrapper>
-      </LodgingHeader>
+      </LodgingHead>
       <LodgingBody>
         <Collapse key={'desc'} title={'Description'} textBody={logement.description} />
         <Collapse key={'equip'} title={'Équipements'} textBody={logement.equipments} />

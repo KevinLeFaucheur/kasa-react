@@ -4,6 +4,10 @@ import image from '../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../../data/about.json'
 
 const AboutWrapper = styled.div`
+  margin: 0 100px;
+`
+
+const CollapseWrapper = styled.div`
   padding: 0 10%;
   height: 100%;
 
@@ -23,13 +27,13 @@ const Banner = styled.div`
 
 export const About = () => {
   return (
-    <div className='About'>
+    <AboutWrapper>
       <Banner />
-      <AboutWrapper>
+      <CollapseWrapper>
         {about.map((block, index) => {
           return <Collapse key={index} title={block.title} textBody={block.text}/> 
         })}
-      </AboutWrapper>
-    </div>
+      </CollapseWrapper>
+    </AboutWrapper>
   );
 };

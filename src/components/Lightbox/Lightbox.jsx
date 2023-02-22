@@ -7,6 +7,11 @@ const LightboxWrapper = styled.div`
     position: relative;
     height: 415px;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        height: 255px;
+        margin-bottom: 1.5rem;
+    }
 `
 
 const Button = styled.button`
@@ -19,6 +24,11 @@ const Button = styled.button`
     font-size: 5rem;
     font-weight: 400;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        /* top: calc(50% - 48px); */
+    }
 `
 
 const PageIndex = styled.div`
@@ -26,9 +36,14 @@ const PageIndex = styled.div`
     left: 50%;
     bottom: calc(0% + 1.5rem);
     font-size: 1.5rem;
-    font-weight:500;
+    font-weight: 500;
     font-style: normal;
     color: white;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        /* top: calc(50% - 48px); */
+    }
 `
 
 const Image = styled.img`
