@@ -16,13 +16,16 @@ const ProfileName = styled.p`
     font-size: 1rem;
     font-weight: 500;
     text-align: right;
-    margin-right: 1rem;
+    line-height: 32px;
+    margin-right: 0.8rem;
 `
 
 export const Profile = ({ name, picture }) => {
+    const profileName = name.split(' ');
+
     return (
         <ProfileContainer>
-            <ProfileName>{name}</ProfileName>
+            <ProfileName>{profileName[0]}<br />{profileName[1]}</ProfileName>
             <ProfilePicture src={picture} alt={`${name}'s profile picture`}/>
         </ProfileContainer>
     )

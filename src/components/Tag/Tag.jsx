@@ -9,8 +9,13 @@ const StyledTag = styled.div`
   color: ${colors.fontLight};
   background-color: ${colors.primary};
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+    font-size: 0.6rem;
+  }
 `
 
 export const Tag = ({ tagName }) => {

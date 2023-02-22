@@ -17,12 +17,13 @@ const LightboxWrapper = styled.div`
 const Button = styled.button`
     all: unset;
     position: absolute;
-    height: 48px;
-    top: calc(50% - 48px);
-    ${(props) => props.position === 'right' ? "right: calc(0% + 1.5rem)" : "left: calc(0% + 1rem)"};
+    height: 100%;
+    width: 10%;
+    ${(props) => props.position === 'right' ? "right: 0" : "left: 0"};
     color: white;
     font-size: 5rem;
     font-weight: 400;
+    text-align: center;
     cursor: pointer;
 
     @media (max-width: 768px) {
@@ -33,16 +34,17 @@ const Button = styled.button`
 
 const PageIndex = styled.div`
     position: absolute;
-    left: 50%;
-    bottom: calc(0% + 1.5rem);
+    height: 12%;
+    width: 100%;
+    bottom: 0;
     font-size: 1.5rem;
     font-weight: 500;
     font-style: normal;
+    text-align: center;
     color: white;
 
     @media (max-width: 768px) {
         font-size: 1.2rem;
-        /* top: calc(50% - 48px); */
     }
 `
 

@@ -10,9 +10,9 @@ const HeaderWrapper = styled.header`
     align-items: center;
     margin: 0 100px;
     padding: 5vh 0 5vh;
-        
+    
     @media (max-width: 768px) {
-        /* height: 32px; */
+        margin: 0 1rem;
     }
 `
 

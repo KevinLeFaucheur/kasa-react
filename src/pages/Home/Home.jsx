@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 const HomeWrapper = styled.div`
   margin: 0 100px;
   margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
 `
 
 const Gallery = styled.div`

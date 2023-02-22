@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect } from "react";
-import { redirect, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { Collapse } from "../../components/Collapse/Collapse";
 import { Tag } from "../../components/Tag/Tag";
@@ -14,6 +14,10 @@ const LodgingWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 100px;
+
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
 `
 
 const LodgingHead = styled.div`
@@ -30,6 +34,10 @@ const LodgingHead = styled.div`
 const LodgingLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  & > p, h2 {
+    padding-bottom: 1rem;
+  }
 
   @media (max-width: 768px) {
     margin-bottom: 1.5rem;
