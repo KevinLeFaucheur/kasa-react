@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { Collapse } from "../../components/Collapse";
-import { Tag } from "../../components/Tag";
-import { Rating } from "../../components/Rating";
-import { Profile } from "../../components/Profile";
-import { Lightbox } from "../../components/Lightbox";
+import { Collapse } from "../components/Collapse";
+import { Tag } from "../components/Tag";
+import { Rating } from "../components/Rating";
+import { Profile } from "../components/Profile";
+import { Lightbox } from "../components/Lightbox";
 
-import logements from '../../data/logements.json';
+import logements from '../data/logements.json';
 
 const LodgingWrapper = styled.div`
   display: flex;

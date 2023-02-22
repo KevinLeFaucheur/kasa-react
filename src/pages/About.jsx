@@ -1,7 +1,7 @@
-import { Collapse } from '../../components/Collapse'
+import { Collapse } from '../components/Collapse'
 import styled from 'styled-components';
-import image from '../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
-import about from '../../data/about.json'
+import image from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
+import about from '../data/about.json'
 
 const AboutWrapper = styled.div`
   margin: 0 100px;

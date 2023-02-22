@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import colors from "../../style/colors";
-import logements from '../../data/logements.json';
+import colors from "../style/colors";
+import logements from '../data/logements.json';
 
-import { Hero } from '../../components/Hero'
-import { Thumb } from '../../components/Thumb';
+import { Hero } from '../components/Hero'
+import { Thumb } from '../components/Thumb';
 import { Link } from 'react-router-dom';
 
 const HomeWrapper = styled.div`
