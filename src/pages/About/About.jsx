@@ -4,8 +4,12 @@ import image from '../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../../data/about.json'
 
 const AboutWrapper = styled.div`
-  padding: 0 17.5%;
+  padding: 0 10%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 const Banner = styled.div`

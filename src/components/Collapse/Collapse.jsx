@@ -11,7 +11,6 @@ const CollapseWrapper = styled.div`
 const CollapseHeader = styled.div`
     height: 48px;
     width: 100%;
-    /* margin: 0 17.5%; */
     padding: 0 1.5rem;
     background-color: ${colors.primary};
     display: flex;
@@ -23,19 +22,34 @@ const CollapseHeader = styled.div`
 `
 
 const CollapseBody = styled.div`
-    /* margin: 0 17.5%; */
+    min-height: 13vh;
     padding: 2rem 1rem 1rem;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     display: ${(props) => { return props.isOpen ? 'block' : 'none'} };
     background-color: ${colors.backgroundLight};
     border-radius: 5px;
+
+    & > ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+        min-height: 10vh;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
 `
 
 const CollapseH3 = styled.h3`
     font-size: 25px;
     font-weight: 500;
     margin: 0;
+    
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `
 
 export const Collapse = ({title, textBody, width}) => {
