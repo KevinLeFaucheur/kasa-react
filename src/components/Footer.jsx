@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import colors from "../../style/colors";
-import { KasaLogo } from "../KasaLogo/KasaLogo";
+import colors from "../style/colors";
+import { KasaLogo } from "./KasaLogo";
 
 const StyledFooter = styled.footer`
     width: 100%;

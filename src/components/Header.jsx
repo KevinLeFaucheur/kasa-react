@@ -1,8 +1,8 @@
-import colors from '../../style/colors';
+import colors from '../style/colors';
 import styled from "styled-components";
 
 import { NavLink } from 'react-router-dom';
-import { KasaLogo } from '../KasaLogo/KasaLogo'
+import { KasaLogo } from './KasaLogo'
 
 const HeaderWrapper = styled.header`
     display: flex;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../style/colors";
+import colors from "../style/colors";
 
 const StyledTag = styled.div`
   height: 2rem;

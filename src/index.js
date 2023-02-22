@@ -7,8 +7,8 @@ import { Home } from './pages/Home/Home';
 import { Lodging } from './pages/Lodging/Lodging';
 import { About } from './pages/About/About'
 import { Error } from './pages/Error/Error'
-import { Header } from './components/Header/Header'
-import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header'
+import { Footer } from './components/Footer';
 import styled from 'styled-components';
 
 const Content = styled.div`

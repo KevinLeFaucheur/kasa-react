@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from '../../images/home-bg.jpg'
+import image from '../images/home-bg.jpg'
 
 const HeroContainer = styled.div`
     position: relative;
