@@ -15,8 +15,12 @@ const StyledFooter = styled.footer`
 
 const StyledCopyright = styled.p`
     color: white;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `
 
 export const Footer = () => {

@@ -57,7 +57,7 @@ const LodgingRightWrapper = styled.div`
 const LodgingBody = styled.div`
   display: flex;
   justify-content: space-between;
-  column-gap: 6%;
+  column-gap: 5%;
 
   @media (max-width: 768px) {
     flex-direction: column;

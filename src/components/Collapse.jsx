@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import colors from "../style/colors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const CollapseWrapper = styled.div`
     margin-bottom: 2rem;
@@ -28,6 +28,7 @@ const CollapseBody = styled.div`
     font-size: 1.5rem;
     font-weight: 400;
     display: ${(props) => { return props.isOpen ? 'block' : 'none'} };
+    /* visibility: ${(props) => { return props.isOpen ? 'visible' : 'collapse'} }; */
     background-color: ${colors.backgroundLight};
     border-radius: 5px;
 
@@ -53,11 +54,11 @@ const CollapseH3 = styled.h3`
     }
 `
 
-export const Collapse = ({title, textBody, width}) => {
-    const [collapseState, setCollapseState] = useState(false);
+export const Collapse = ({title, textBody}) => {
+    const [isOpen, setCollapseState] = useState(false);
 
     const handleCollapseClick = () => {
-        setCollapseState(!collapseState);
+        setCollapseState(!isOpen);
     }
 
     const text = typeof(textBody) === 'object' 
@@ -68,9 +69,9 @@ export const Collapse = ({title, textBody, width}) => {
         <CollapseWrapper>
             <CollapseHeader onClick={handleCollapseClick}>
                 <CollapseH3>{title}</CollapseH3>
-                <FontAwesomeIcon icon={faAngleUp} />
+                <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
             </CollapseHeader>
-            <CollapseBody isOpen={collapseState}>
+            <CollapseBody isOpen={isOpen}>
                 <ul style={{ listStyle: 'none' }}>
                     {typeof(text) === 'string' ?
                         <li>{text}</li> :

@@ -5,6 +5,10 @@ import about from '../data/about.json'
 
 const AboutWrapper = styled.div`
   margin: 0 100px;
+
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
 `
 
 const CollapseWrapper = styled.div`
