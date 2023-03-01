@@ -1,0 +1,27 @@
+@import '../utils/Variables.scss';
+
+.about {
+    margin: 0 100px;
+  
+    @media (max-width: 768px) {
+      margin: 0 1rem;
+    }
+
+    &-collapses {
+        padding: 0 10%;
+        height: 100%;
+      
+        @media (max-width: 768px) {
+          padding: 0;
+        }
+    }
+
+    &-banner {
+        height: 223px;
+        margin-bottom: 2rem;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url($banner);
+        border-radius: 25px;
+        background-size: cover;
+        background-position: center;
+    }
+}

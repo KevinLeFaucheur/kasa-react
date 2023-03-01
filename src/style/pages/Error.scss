@@ -1,0 +1,45 @@
+@import "../utils/Variables.scss";
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 100px;
+
+    &-title {
+        font-size: 288px;
+        font-weight: 700;
+        margin-bottom: 3vh;
+
+        @media (max-width: 768px) {
+            font-size: 96px;
+        }
+    }
+
+    &-message {
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 10vh;
+    
+        @media (max-width: 768px) {
+            width: 50vw;
+            margin-bottom: 5vh;
+            font-size: 1rem;
+        }
+    }
+
+    &-link {
+        font-size: 18px;
+        color: $primary;
+    
+        & {
+            text-decoration: underline;
+        }
+    
+        @media (max-width: 768px) {
+            margin-bottom: 5vh;
+            font-size: 0.8rem;
+        }
+    }
+}

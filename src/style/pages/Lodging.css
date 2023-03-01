@@ -1,0 +1,57 @@
+.lodging {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+}
+@media (max-width: 768px) {
+  .lodging {
+    margin: 0 1rem;
+  }
+}
+.lodging-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .lodging-head {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+}
+.lodging-left {
+  display: flex;
+  flex-direction: column;
+}
+.lodging-left > p, .lodging-left h2 {
+  padding-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .lodging-left {
+    margin-bottom: 1.5rem;
+  }
+}
+.lodging-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .lodging-right {
+    flex-direction: row-reverse;
+  }
+}
+.lodging-body {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+}
+@media (max-width: 768px) {
+  .lodging-body {
+    flex-direction: column;
+  }
+}
+.lodging-tags {
+  display: flex;
+}/*# sourceMappingURL=Lodging.css.map */

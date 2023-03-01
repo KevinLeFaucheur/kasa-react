@@ -1,0 +1,32 @@
+.home {
+  margin: 0 100px;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .home {
+    margin: 0 1rem;
+  }
+}
+.home-gallery {
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 56px 50px;
+}
+@media (max-width: 768px) {
+  .home-gallery {
+    background: none;
+    padding: 0;
+  }
+}
+.home--link {
+  width: 31%;
+}
+@media (max-width: 768px) {
+  .home--link {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Home.css.map */

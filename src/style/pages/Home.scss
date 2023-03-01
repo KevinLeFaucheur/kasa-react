@@ -1,0 +1,32 @@
+@import "../utils/Variables.scss";
+
+.home {
+    margin: 0 100px;
+    margin-bottom: 3rem;
+    
+    @media (max-width: 768px) {
+      margin: 0 1rem;
+    }
+
+    &-gallery {
+        width: 100%;
+        background-color: $backgroundLight;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 56px 50px;
+      
+        @media (max-width: 768px) {
+          background: none;
+          padding: 0;
+        }
+    }
+
+    &--link {
+        width: 31%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+    }
+}
