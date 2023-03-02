@@ -29,9 +29,9 @@
 }
 .error-link {
   font-size: 18px;
-  color: "#FF6060";
+  color: #FF6060;
 }
-.error-link {
+.error-link.error-link {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
