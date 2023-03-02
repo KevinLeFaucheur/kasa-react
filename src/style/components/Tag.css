@@ -1,1 +1,17 @@
-/*# sourceMappingURL=Tag.css.map */
+.tag {
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 2rem;
+  margin-right: 2rem;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .tag {
+    padding: 0 2rem;
+    font-size: 0.6rem;
+  }
+}/*# sourceMappingURL=Tag.css.map */

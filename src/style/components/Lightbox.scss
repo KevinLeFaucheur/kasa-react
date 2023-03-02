@@ -1,1 +1,55 @@
 @import '../utils/Variables.scss';
+
+.lightbox {
+    position: relative;
+    height: 415px;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        height: 255px;
+        margin-bottom: 1.5rem;
+    }
+
+    &-button {
+        all: unset;
+        position: absolute;
+        height: 100%;
+        width: 10%;
+        color: white;
+        font-size: 5rem;
+        font-weight: 400;
+        text-align: center;
+        cursor: pointer;
+
+        &--left { left: 0; }
+        &--right { right: 0; }
+    
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            /* top: calc(50% - 48px); */
+        }
+    }
+
+    &-index {
+        position: absolute;
+        height: 12%;
+        width: 100%;
+        bottom: 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+        color: white;
+    
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+}

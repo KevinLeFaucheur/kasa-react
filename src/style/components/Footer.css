@@ -1,1 +1,20 @@
-/*# sourceMappingURL=Footer.css.map */
+.footer {
+  width: 100%;
+  height: 209px;
+  margin-top: auto;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-copyright {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .footer-copyright {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */

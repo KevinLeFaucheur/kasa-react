@@ -1,1 +1,9 @@
-/*# sourceMappingURL=Rating.css.map */
+.rating {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .rating {
+    align-items: center;
+  }
+}/*# sourceMappingURL=Rating.css.map */

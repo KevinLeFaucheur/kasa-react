@@ -1,1 +1,32 @@
-/*# sourceMappingURL=Header.css.map */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+  padding: 5vh 0 5vh;
+}
+@media (max-width: 768px) {
+  .header {
+    margin: 0 1rem;
+  }
+}
+.header-nav {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navlink {
+  font-size: 24px;
+  margin-left: 3rem;
+  color: #FF6060;
+}
+.header-navlink.active {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .header-navlink {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

@@ -1,1 +1,10 @@
 @import '../utils/Variables.scss';
+
+.rating {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
+}

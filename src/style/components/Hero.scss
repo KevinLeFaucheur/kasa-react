@@ -1,1 +1,37 @@
 @import '../utils/Variables.scss';
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 223px;
+    margin-bottom: 3vh;
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+        filter: brightness(70%);
+            
+        @media (max-width: 768px) {
+            border-radius: 10px;
+        }
+    }
+
+    &-title {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 48px;
+        line-height: 223px;
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-size: 48px;
+        font-weight: 500;
+            
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+}
