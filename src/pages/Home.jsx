@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import colors from "../style/colors";
-import logements from '../data/logements.json';
+// import logements from '../data/logements.json';
 
 import { Hero } from '../components/Hero'
 import { Thumb } from '../components/Thumb';
 import { Link } from 'react-router-dom';
+
+import { useFetch } from "../utils/utils";
 
 const HomeWrapper = styled.div`
   margin: 0 100px;
@@ -38,7 +40,9 @@ const StyledLink = styled(Link)`
 `
 
 export const Home = () => {
-  return (
+  const { data: logements, isLoading } = useFetch('http://localhost:3000/data/logements.json')
+
+  return isLoading ? (<div>Loading...</div>) : (
     <HomeWrapper>
       <Hero />
       <Gallery>
