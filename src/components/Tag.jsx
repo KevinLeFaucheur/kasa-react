@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography';
 import colors from "../style/colors";
 
 const StyledTag = styled.div`
@@ -9,12 +10,11 @@ const StyledTag = styled.div`
   color: ${colors.fontLight};
   background-color: ${colors.primary};
   border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-
+  ${typography.d_tag}
+  
   @media (max-width: 768px) {
+    ${typography.m_tag}
     padding: 0 2rem;
-    font-size: 0.6rem;
   }
 `
 

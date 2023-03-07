@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../style/colors";
+import * as typography from '../utils/typography';
 import { KasaLogo } from "./KasaLogo";
 
 const StyledFooter = styled.footer`
@@ -15,11 +16,10 @@ const StyledFooter = styled.footer`
 
 const StyledCopyright = styled.p`
     color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-
+    ${typography.d_footer}
+    
     @media (max-width: 768px) {
-        font-size: 1rem;
+        ${typography.m_footer}
     }
 `
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography'
 
 const ThumbBody = styled.div`
     width: 100%;
@@ -14,8 +15,7 @@ const ThumbBody = styled.div`
 
 const ThumbTitle = styled.h2`
     color: white;
-    font-size: 18px;
-    font-weight: 500;
+    ${typography.d_cover}
     text-align: left;
     margin: 0;
 `

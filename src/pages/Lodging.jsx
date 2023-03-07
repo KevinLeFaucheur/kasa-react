@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography';
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -8,8 +9,7 @@ import { Rating } from "../components/Rating";
 import { Profile } from "../components/Profile";
 import { Lightbox } from "../components/Lightbox";
 import { useFetch } from "../utils/utils";
-
-import logements from '../data/logements.json';
+// import logements from '../data/logements.json';
 
 const LodgingWrapper = styled.div`
   display: flex;
@@ -36,11 +36,24 @@ const LodgingLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  & > p, h2 {
+  & > h2 {
+    ${typography.d_title}
+    padding-bottom: 1rem;
+  }
+
+  & > p {
+    ${typography.d_location}
     padding-bottom: 1rem;
   }
 
   @media (max-width: 768px) {
+    & > h2 {
+      ${typography.m_title}
+    }
+
+    & > p {
+      ${typography.m_location}
+    }
     margin-bottom: 1.5rem;
   }
 `

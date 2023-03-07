@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import colors from "../style/colors";
+import * as typography from '../utils/typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,34 +24,32 @@ const CollapseHeader = styled.div`
 `
 
 const CollapseBody = styled.div`
+    display: ${(props) => { return props.isOpen ? 'block' : 'none'} };
     min-height: 13vh;
     padding: 2rem 1rem 1rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    display: ${(props) => { return props.isOpen ? 'block' : 'none'} };
-    /* visibility: ${(props) => { return props.isOpen ? 'visible' : 'collapse'} }; */
+    ${typography.d_collapseBody}
     background-color: ${colors.backgroundLight};
     border-radius: 5px;
-
+    /* visibility: ${(props) => { return props.isOpen ? 'visible' : 'collapse'} }; */
+    
     & > ul {
         padding: 0;
         margin: 0;
     }
     
     @media (max-width: 768px) {
+        ${typography.m_collapseBody}
         min-height: 10vh;
-        font-size: 1rem;
         padding: 0.8rem 1rem;
     }
 `
 
 const CollapseH3 = styled.h3`
-    font-size: 25px;
-    font-weight: 500;
+    ${typography.d_collapseHeader}
     margin: 0;
     
     @media (max-width: 768px) {
-        font-size: 1rem;
+        ${typography.m_collapseHeader}
     }
 `
 

@@ -1,5 +1,6 @@
 import { Collapse } from '../components/Collapse'
 import styled from 'styled-components';
+import * as typography from '../utils/typography';
 import image from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../data/about.json'
 
@@ -8,15 +9,6 @@ const AboutWrapper = styled.div`
 
   @media (max-width: 768px) {
     margin: 0 1rem;
-  }
-`
-
-const CollapseWrapper = styled.div`
-  padding: 0 10%;
-  height: 100%;
-
-  @media (max-width: 768px) {
-    padding: 0;
   }
 `
 
@@ -29,13 +21,39 @@ const Banner = styled.div`
   background-position: center;
 `
 
+const CollapseWrapper = styled.div`
+  padding: 0 10%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+`
+
+const StyledCollpase = styled(Collapse)`
+  h3 { 
+    ${typography.d_aboutCollapseHeader} 
+  }
+  li { 
+    ${typography.d_aboutCollapseBody} 
+  }
+  @media (max-width: 768px) {
+    h3 { 
+      ${typography.m_aboutCollapseHeader} 
+    }
+    li { 
+      ${typography.m_aboutCollapseBody} 
+    }
+  }
+`
+
 export const About = () => {
   return (
     <AboutWrapper>
       <Banner />
       <CollapseWrapper>
         {about.map((block, index) => {
-          return <Collapse key={index} title={block.title} textBody={block.text}/> 
+          return <StyledCollpase key={index} title={block.title} textBody={block.text}/> 
         })}
       </CollapseWrapper>
     </AboutWrapper>

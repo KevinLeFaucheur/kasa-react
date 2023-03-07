@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography';
 
 const ProfileContainer = styled.div`
     display: flex;
@@ -13,11 +14,13 @@ const ProfilePicture = styled.img`
 `
 
 const ProfileName = styled.p`
-    font-size: 1rem;
-    font-weight: 500;
+    ${typography.d_host}
     text-align: right;
     line-height: 32px;
     margin-right: 0.8rem;
+    @media (max-width: 768px) {
+        ${typography.m_host}
+    }
 `
 
 export const Profile = ({ name, picture }) => {

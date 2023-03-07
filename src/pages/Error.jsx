@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../style/colors";
+import * as typography from '../utils/typography';
 
 const ErrorWrapper = styled.div`
     display: flex;
@@ -11,38 +12,36 @@ const ErrorWrapper = styled.div`
 `
 
 const ErrorTitle = styled.h1`
-    font-size: 288px;
-    font-weight: 700;
+    ${typography.d_error}
     margin-bottom: 3vh;
-
+    
     @media (max-width: 768px) {
-        font-size: 96px;
+        ${typography.m_error}
     }
 `
 
 const ErrorMessage = styled.p`
-    font-size: 36px;
-    font-weight: 500;
+    ${typography.d_errorMessage}
     margin-bottom: 10vh;
-
+    
     @media (max-width: 768px) {
+        ${typography.d_errorMessage}
         width: 50vw;
         margin-bottom: 5vh;
-        font-size: 1rem;
     }
 `
 
 const ErrorLink = styled(Link)`
-    font-size: 18px;
+    ${typography.d_errorLink}
     color: ${colors.primary};
-
+    
     && {
         text-decoration: underline;
     }
-
+    
     @media (max-width: 768px) {
+        ${typography.d_errorLink}
         margin-bottom: 5vh;
-        font-size: 0.8rem;
     }
 `
 

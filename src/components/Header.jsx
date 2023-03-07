@@ -1,5 +1,6 @@
 import colors from '../style/colors';
 import styled from "styled-components";
+import * as typography from '../utils/typography'
 
 import { NavLink } from 'react-router-dom';
 import { KasaLogo } from './KasaLogo'
@@ -25,7 +26,7 @@ const Nav = styled.nav`
 
 const StyledNavLink = styled(NavLink)`
 
-    font-size: 24px;
+    ${typography.d_navbar}
     margin-left: 3rem;
     color: ${colors.primary};
     &.active{
@@ -33,7 +34,7 @@ const StyledNavLink = styled(NavLink)`
     }
         
     @media (max-width: 768px) {
-        font-size: 1rem;
+        ${typography.m_navbar}
         margin-left: 1.5rem;
     }
 `

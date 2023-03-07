@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography'
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
@@ -37,14 +38,13 @@ const PageIndex = styled.div`
     height: 12%;
     width: 100%;
     bottom: 0;
-    font-size: 1.5rem;
-    font-weight: 500;
+    ${typography.d_index}
     font-style: normal;
     text-align: center;
     color: white;
 
     @media (max-width: 768px) {
-        font-size: 1.2rem;
+        display: none;
     }
 `
 

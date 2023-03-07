@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as typography from '../utils/typography'
 import image from '../images/home-bg.jpg'
 
 const HeroContainer = styled.div`
@@ -29,11 +30,10 @@ const HeroTitle = styled.h1`
     margin: 0;
     text-align: center;
     color: white;
-    font-size: 48px;
-    font-weight: 500;
+    /* ${typography.d_hero} */
         
     @media (max-width: 768px) {
-        font-size: 1.5rem;
+        /* ${typography.m_hero} */
     }
 `
 
