@@ -12,12 +12,20 @@ const RatingWrapper = styled.div`
     }
 `
 
+const StarIcon = styled(FontAwesomeIcon)`
+    height: 30px;
+    
+    @media (max-width: 768px) {
+        height: 15px;
+    }
+`
+
 export const Rating = ({ rating }) => {
     return (
         <RatingWrapper>
             {[...Array(5)].map((_, index) => {
-                return rating > index ? <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStar}/> 
-                                      : <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStarRegular} />
+                return rating > index ? <StarIcon key={`star-${index}`} icon={faStar}/> 
+                                      : <StarIcon key={`star-${index}`} icon={faStarRegular} />
             })}
         </RatingWrapper>
     )
