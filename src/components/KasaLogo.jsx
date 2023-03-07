@@ -8,14 +8,10 @@ const LogoContainer = styled.div`
     justify-content: flex-start;
     color: ${(props) => props.color};
 
-    svg {
-        height: 68px;
-    }
+    svg { height: 68px; }
 
     @media (max-width: 768px) {
-        svg {
-            height: 42px;
-        }
+        svg { height: 40px; }
     }
 `
 

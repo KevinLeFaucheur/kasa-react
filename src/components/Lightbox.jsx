@@ -11,7 +11,7 @@ const LightboxWrapper = styled.div`
 
     @media (max-width: 768px) {
         height: 255px;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 `
 
@@ -53,6 +53,10 @@ const Image = styled.img`
     height: 100%;
     border-radius: 25px;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 export const Lightbox = ({ imageArray }) => {

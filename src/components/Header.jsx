@@ -13,6 +13,7 @@ const HeaderWrapper = styled.header`
     padding: 5vh 0 5vh;
     
     @media (max-width: 768px) {
+        padding: 20px 0 20px;
         margin: 0 1rem;
     }
 `

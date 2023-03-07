@@ -10,8 +10,10 @@ const StyledFooter = styled.footer`
     background-color: ${ colors.backgroundFooter };
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+
+    svg { height: 40px; }
 `
 
 const StyledCopyright = styled.p`

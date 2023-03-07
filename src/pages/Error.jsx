@@ -16,6 +16,7 @@ const ErrorTitle = styled.h1`
     margin-bottom: 3vh;
     
     @media (max-width: 768px) {
+        margin-bottom: 0.75rem;
         ${typography.m_error}
     }
 `
@@ -25,9 +26,9 @@ const ErrorMessage = styled.p`
     margin-bottom: 10vh;
     
     @media (max-width: 768px) {
-        ${typography.d_errorMessage}
+        ${typography.m_errorMessage}
         width: 50vw;
-        margin-bottom: 5vh;
+        margin-bottom: 10vh;
     }
 `
 
@@ -40,7 +41,7 @@ const ErrorLink = styled(Link)`
     }
     
     @media (max-width: 768px) {
-        ${typography.d_errorLink}
+        ${typography.m_errorLink}
         margin-bottom: 5vh;
     }
 `

@@ -21,6 +21,10 @@ const CollapseHeader = styled.div`
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    
+    @media (max-width: 768px) {
+        height: 30px;
+    }
 `
 
 const CollapseBody = styled.div`

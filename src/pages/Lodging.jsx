@@ -28,7 +28,7 @@ const LodgingHead = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 `
 
@@ -49,12 +49,14 @@ const LodgingLeftWrapper = styled.div`
   @media (max-width: 768px) {
     & > h2 {
       ${typography.m_title}
+      padding-bottom: 0.3rem;
     }
 
     & > p {
       ${typography.m_location}
+      padding-bottom: 0.6rem;
     }
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 `
 

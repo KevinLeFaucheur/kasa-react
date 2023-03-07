@@ -7,6 +7,10 @@ const HeroContainer = styled.div`
     width: 100%;
     height: 223px;
     margin-bottom: 3vh;
+        
+    @media (max-width: 768px) {
+        height: 111px;
+    }
 `
 
 const HeroBackground = styled.img`
@@ -30,10 +34,16 @@ const HeroTitle = styled.h1`
     margin: 0;
     text-align: center;
     color: white;
-    /* ${typography.d_hero} */
+    ${typography.d_hero}
         
     @media (max-width: 768px) {
-        /* ${typography.m_hero} */
+        top: 31px;
+        left: 16px;
+        width: 50%;
+        line-height: 24px;
+        margin: 0;
+        text-align: left;
+        ${typography.m_hero}
     }
 `
 
