@@ -3,7 +3,7 @@ import colors from "../style/colors";
 // import logements from '../data/logements.json';
 
 import { Hero } from '../components/Hero'
-import { Thumb } from '../components/Thumb';
+import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
 
 import { useFetch } from "../utils/utils";
@@ -49,7 +49,7 @@ export const Home = () => {
         {logements.map(lodging => {
           const { id, title, cover } = lodging;
           return  <StyledLink key={id} to={`/lodging/${id}`}>
-                    <Thumb title={title} cover={cover}/>
+                    <Card title={title} cover={cover}/>
                   </StyledLink>
         })}
       </Gallery>

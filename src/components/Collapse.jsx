@@ -76,9 +76,9 @@ export const Collapse = ({title, textBody}) => {
             </CollapseHeader>
             <CollapseBody isOpen={isOpen}>
                 <ul style={{ listStyle: 'none' }}>
-                    {typeof(text) === 'string' ?
-                        <li>{text}</li> :
-                        text.map((element, index) => <li key={index}>{element}</li>)}
+                    {Array.isArray(text) ?
+                        text.map((element, index) => <li key={index}>{element}</li>) :
+                        <li>{text}</li>}
                 </ul>
             </CollapseBody>
         </CollapseWrapper>

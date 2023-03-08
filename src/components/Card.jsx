@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as typography from '../utils/typography'
 
-const ThumbBody = styled.div`
+const CardBody = styled.div`
     width: 100%;
     height: 340px;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url(${props => props.cover});
@@ -13,17 +13,17 @@ const ThumbBody = styled.div`
     margin-bottom: 3vh;
 `
 
-const ThumbTitle = styled.h2`
+const CardTitle = styled.h2`
     color: white;
     ${typography.d_cover}
     text-align: left;
     margin: 0;
 `
 
-export const Thumb = ({ cover, title }) => {
+export const Card = ({ cover, title }) => {
     return (
-        <ThumbBody cover={cover}>
-            <ThumbTitle>{title}</ThumbTitle>
-        </ThumbBody>
+        <CardBody cover={cover}>
+            <CardTitle>{title}</CardTitle>
+        </CardBody>
     )
 }

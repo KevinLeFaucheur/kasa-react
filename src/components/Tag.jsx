@@ -11,9 +11,11 @@ const StyledTag = styled.div`
   color: ${colors.fontLight};
   background-color: ${colors.primary};
   border-radius: 10px;
+  text-align: center;
   ${typography.d_tag}
   
   @media (max-width: 768px) {
+    padding: 0 1rem;
     height: 18px;
     min-width: 84px;
     line-height: 18px;
