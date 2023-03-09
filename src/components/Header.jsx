@@ -19,10 +19,10 @@ const HeaderWrapper = styled.header`
 `
 
 const Nav = styled.nav`
-    height: 34px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 34px;
 `
 
 const StyledNavLink = styled(NavLink)`
@@ -30,6 +30,7 @@ const StyledNavLink = styled(NavLink)`
     ${typography.d_navbar}
     margin-left: 3rem;
     color: ${colors.primary};
+    
     &.active{
         text-decoration: underline;
     }

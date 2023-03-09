@@ -16,12 +16,12 @@ const HomeWrapper = styled.div`
 `
 
 const Gallery = styled.div`
-  width: 100%;
-  background: ${colors.backgroundLight};
-  border-radius: 25px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
+  background: ${colors.backgroundLight};
+  border-radius: 25px;
   padding: 56px 50px;
 
   @media (max-width: 768px) {
@@ -32,6 +32,7 @@ const Gallery = styled.div`
 
 const StyledLink = styled(Link)`
   width: 31%;
+  
   @media (max-width: 768px) {
     width: 100%;
   }

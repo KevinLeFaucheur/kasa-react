@@ -11,13 +11,13 @@ const CollapseWrapper = styled.div`
 `
 
 const CollapseHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 48px;
     width: 100%;
     padding: 0 1.5rem;
     background-color: ${colors.primary};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -34,7 +34,6 @@ const CollapseBody = styled.div`
     ${typography.d_collapseBody}
     background-color: ${colors.backgroundLight};
     border-radius: 5px;
-    /* visibility: ${(props) => { return props.isOpen ? 'visible' : 'collapse'} }; */
     
     & > ul {
         padding: 0;

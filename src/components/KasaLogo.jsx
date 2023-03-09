@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const LogoContainer = styled.div`
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    height: 100%;
     color: ${(props) => props.color};
 
     svg { height: 68px; }

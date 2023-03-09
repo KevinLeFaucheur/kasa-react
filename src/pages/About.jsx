@@ -1,7 +1,7 @@
 import { Collapse } from '../components/Collapse'
 import styled from 'styled-components';
 import * as typography from '../style/typography';
-import image from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
+import banner from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../data/about.json'
 
 const AboutWrapper = styled.div`
@@ -15,7 +15,7 @@ const AboutWrapper = styled.div`
 const Banner = styled.div`
   height: 223px;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${image});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${banner});
   border-radius: 25px;
   background-size: cover;
   background-position: center;
@@ -37,6 +37,7 @@ const StyledCollpase = styled(Collapse)`
   li { 
     ${typography.d_aboutCollapseBody} 
   }
+  
   @media (max-width: 768px) {
     h3 { 
       ${typography.m_aboutCollapseHeader} 

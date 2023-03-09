@@ -12,6 +12,7 @@ const ProfilePicture = styled.img`
     height: 64px;
     background-color: lightgray;
     border-radius: 50%;
+    
     @media (max-width: 768px) {
         width: 32px;
         height: 32px;
@@ -23,6 +24,7 @@ const ProfileName = styled.p`
     text-align: right;
     line-height: 32px;
     margin-right: 0.8rem;
+
     @media (max-width: 768px) {
         line-height: 16px;
         ${typography.m_host}
