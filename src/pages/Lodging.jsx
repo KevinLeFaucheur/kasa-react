@@ -1,23 +1,28 @@
 import "../style/pages/Lodging.css"
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useFetch } from "../utils/utils";
 
 import { Collapse } from "../components/Collapse";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
 import { Profile } from "../components/Profile";
 import { Lightbox } from "../components/Lightbox";
-
-import logements from '../data/logements.json';
+// import logements from '../data/logements.json';
 
 export const Lodging = () => {
+  const { data: logements, isLoading } = useFetch('http://localhost:3000/data/logements.json')
   const { id } = useParams();
-  const logement = logements.find(logement => logement.id === id);
-
   const navigate = useNavigate();
 
+  let logement = null;
+  if(!isLoading) {
+    logement = logements.find(logement => logement.id === id);
+  }
+
   useEffect(() => {
-    if(logement === undefined) navigate('/')
+    if(isLoading) return;
+    if(logement === undefined) navigate('../404')
   });
 
   return logement && (
