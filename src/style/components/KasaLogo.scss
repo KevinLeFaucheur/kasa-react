@@ -1,10 +1,10 @@
 @import '../utils/Variables.scss';
 
 .kasalogo {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    height: 100%;
     color: $primary;
 
     svg {
@@ -13,7 +13,7 @@
 
     @media (max-width: 768px) {
         svg {
-            height: 42px;
+            height: 40px;
         }
     }
 }

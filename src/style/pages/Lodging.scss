@@ -1,4 +1,5 @@
 @import "../utils/Variables.scss";
+@import "../utils/Typography.scss";
 
 .lodging {
   display: flex;
@@ -16,20 +17,35 @@
   
     @media (max-width: 768px) {
       flex-direction: column;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
 
   &-left {
     display: flex;
     flex-direction: column;
-  
-    & > p, h2 {
+
+    & > h2 {
+      @include d_title;
       padding-bottom: 1rem;
     }
-  
+    
+    & > p {
+      @include d_location;
+      padding-bottom: 1rem;
+    }
+    
     @media (max-width: 768px) {
-      margin-bottom: 1.5rem;
+      & > h2 {
+        @include m_title;
+        padding-bottom: 0.3rem;
+      }
+      
+      & > p {
+        @include m_location;
+        padding-bottom: 0.6rem;
+      }
+      margin-bottom: 1rem;
     }
   }
 

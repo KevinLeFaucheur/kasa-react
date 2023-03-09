@@ -16,19 +16,34 @@
 @media (max-width: 768px) {
   .lodging-head {
     flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 .lodging-left {
   display: flex;
   flex-direction: column;
 }
-.lodging-left > p, .lodging-left h2 {
+.lodging-left > h2 {
+  font-weight: 500;
+  font-size: 36px;
+  padding-bottom: 1rem;
+}
+.lodging-left > p {
+  font-weight: 500;
+  font-size: 18px;
   padding-bottom: 1rem;
 }
 @media (max-width: 768px) {
   .lodging-left {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .lodging-left > h2 {
+    font-size: 18px;
+    padding-bottom: 0.3rem;
+  }
+  .lodging-left > p {
+    font-size: 14px;
+    padding-bottom: 0.6rem;
   }
 }
 .lodging-right {

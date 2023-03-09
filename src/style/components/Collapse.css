@@ -3,33 +3,38 @@
   width: 100%;
 }
 .collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 48px;
   width: 100%;
   padding: 0 1.5rem;
   background-color: #FF6060;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .collapse-header {
+    height: 30px;
+  }
+}
 .collapse-title {
-  font-size: 25px;
   font-weight: 500;
+  font-size: 18px;
   margin: 0;
 }
 @media (max-width: 768px) {
   .collapse-title {
-    font-size: 1rem;
+    font-size: 13px;
   }
 }
 .collapse-body {
+  font-weight: 400;
+  font-size: 18px;
+  display: none;
   min-height: 13vh;
   padding: 2rem 1rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 400;
-  display: none;
   background-color: #F6F6F6;
   border-radius: 5px;
 }
@@ -42,8 +47,8 @@
 }
 @media (max-width: 768px) {
   .collapse-body {
+    font-size: 12px;
     min-height: 10vh;
-    font-size: 1rem;
     padding: 0.8rem 1rem;
   }
 }/*# sourceMappingURL=Collapse.css.map */

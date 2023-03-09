@@ -1,9 +1,9 @@
-import "../style/components/Lightbox.css";
+import "../style/components/Carousel.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-export const Lightbox = ({ imageArray }) => {
+export const Carousel = ({ imageArray }) => {
     const [index, setIndex] = useState(0);
 
     const handleIndex = (offset) => {
@@ -15,15 +15,15 @@ export const Lightbox = ({ imageArray }) => {
     }
 
     return (
-        <div className="lightbox">
-            <button className="lightbox-button lightbox-button--left" onClick={() => handleIndex(-1) }>
+        <div className="carousel">
+            <button className="carousel-button carousel-button--left" onClick={() => handleIndex(-1) }>
                 <FontAwesomeIcon icon={faAngleLeft} />
             </button>
-            <img className="lightbox-image" src={imageArray[index]} alt="" />
-            <button className="lightbox-button lightbox-button--right" onClick={() => handleIndex(1) }>
+            <img className="carousel-image" src={imageArray[index]} alt="" />
+            <button className="carousel-button carousel-button--right" onClick={() => handleIndex(1) }>
                 <FontAwesomeIcon icon={faAngleRight} />
             </button>
-            <div className="lightbox-index">{index + 1}/{imageArray.length}</div>
+            <div className="carousel-index">{index + 1}/{imageArray.length}</div>
         </div>
     )    
 }

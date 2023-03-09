@@ -7,8 +7,8 @@ export const Rating = ({ rating }) => {
     return (
         <div className="rating">
             {[...Array(5)].map((_, index) => {
-                return rating > index ? <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStar}/> 
-                                      : <FontAwesomeIcon style={{'height': '1.5rem'}} key={`star-${index}`} icon={faStarRegular} />
+                return rating > index ? <FontAwesomeIcon className="rating-icon" key={`star-${index}`} icon={faStar}/> 
+                                      : <FontAwesomeIcon className="rating-icon" key={`star-${index}`} icon={faStarRegular} />
             })}
         </div>
     )

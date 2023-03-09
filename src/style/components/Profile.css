@@ -1,17 +1,30 @@
 .profile {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .profile-name {
-  font-size: 1rem;
   font-weight: 500;
+  font-size: 18px;
   text-align: right;
   line-height: 32px;
   margin-right: 0.8rem;
+}
+@media (max-width: 768px) {
+  .profile-name {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .profile-picture {
   width: 64px;
   height: 64px;
   background-color: lightgray;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .profile-picture {
+    width: 32px;
+    height: 32px;
+  }
 }/*# sourceMappingURL=Profile.css.map */

@@ -1,53 +1,56 @@
 @import '../utils/Variables.scss';
+@import '../utils/Typography.scss';
 
 .collapse {
     margin-bottom: 2rem;
     width: 100%;
 
     &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: 48px;
         width: 100%;
         padding: 0 1.5rem;
         background-color: $primary;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         color: white;
         border-radius: 5px;
         cursor: pointer;
+    
+        @media (max-width: 768px) {
+            height: 30px;
+        }
     }
 
     &-title {
-        font-size: 25px;
-        font-weight: 500;
+        @include d_collapseHeader;
         margin: 0;
         
         @media (max-width: 768px) {
-            font-size: 1rem;
+            @include m_collapseHeader;
         }
     }
 
     &-body {
+        @include d_collapseBody;
+        display: none;
         min-height: 13vh;
         padding: 2rem 1rem 1rem;
-        font-size: 1.5rem;
-        font-weight: 400;
-        display: none;
         background-color: $backgroundLight;
         border-radius: 5px;
-
+        
         &--opened {
             display: block;
         }
-    
+        
         & > ul {
             padding: 0;
             margin: 0;
         }
         
         @media (max-width: 768px) {
+            @include m_collapseBody;
             min-height: 10vh;
-            font-size: 1rem;
             padding: 0.8rem 1rem;
         }
     }

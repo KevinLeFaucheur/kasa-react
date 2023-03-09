@@ -1,6 +1,7 @@
 @import '../utils/Variables.scss';
+@import '../utils/Typography.scss';
 
-.lightbox {
+.carousel {
     position: relative;
     height: 415px;
     margin-bottom: 2rem;
@@ -31,18 +32,18 @@
     }
 
     &-index {
+        @include d_index;
         position: absolute;
         height: 12%;
         width: 100%;
         bottom: 0;
-        font-size: 1.5rem;
-        font-weight: 500;
         font-style: normal;
         text-align: center;
         color: white;
-    
+        
         @media (max-width: 768px) {
-            font-size: 1.2rem;
+            @include d_index;
+            display: none;
         }
     }
 
@@ -51,5 +52,9 @@
         height: 100%;
         border-radius: 25px;
         object-fit: cover;
+
+        @media (max-width: 768px) {
+            border-radius: 10px;
+        }
     }
 }

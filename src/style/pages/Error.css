@@ -6,28 +6,29 @@
   margin: 0 100px;
 }
 .error-title {
-  font-size: 288px;
   font-weight: 700;
+  font-size: 288px;
   margin-bottom: 3vh;
 }
 @media (max-width: 768px) {
   .error-title {
     font-size: 96px;
+    margin-bottom: 0.75rem;
   }
 }
 .error-message {
-  font-size: 36px;
   font-weight: 500;
+  font-size: 36px;
   margin-bottom: 10vh;
 }
 @media (max-width: 768px) {
   .error-message {
+    font-size: 18px;
     width: 50vw;
-    margin-bottom: 5vh;
-    font-size: 1rem;
   }
 }
 .error-link {
+  font-weight: 500;
   font-size: 18px;
   color: #FF6060;
 }
@@ -36,7 +37,7 @@
 }
 @media (max-width: 768px) {
   .error-link {
+    font-size: 14px;
     margin-bottom: 5vh;
-    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=Error.css.map */

@@ -8,12 +8,12 @@
   }
 }
 .home-gallery {
-  width: 100%;
-  background-color: #F6F6F6;
-  border-radius: 25px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 25px;
   padding: 56px 50px;
 }
 @media (max-width: 768px) {

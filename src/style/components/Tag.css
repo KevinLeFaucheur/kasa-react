@@ -1,17 +1,23 @@
 .tag {
-  height: 2rem;
-  line-height: 2rem;
+  font-weight: 500;
+  font-size: 14px;
+  height: 25px;
+  min-width: 115px;
+  line-height: 25px;
+  text-align: center;
   padding: 0 2rem;
   margin-right: 2rem;
   color: #FFFFFF;
   background-color: #FF6060;
   border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
 }
 @media (max-width: 768px) {
   .tag {
-    padding: 0 2rem;
-    font-size: 0.6rem;
+    font-size: 10px;
+    padding: 0 1rem;
+    height: 18px;
+    min-width: 84px;
+    line-height: 18px;
+    border-radius: 5px;
   }
 }/*# sourceMappingURL=Tag.css.map */

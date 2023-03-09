@@ -1,21 +1,32 @@
 @import '../utils/Variables.scss';
+@import '../utils/Typography.scss';
 
 .profile {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 
     &-name {
-        font-size: 1rem;
-        font-weight: 500;
+        @include d_host;
         text-align: right;
         line-height: 32px;
         margin-right: 0.8rem;
-    }
 
+        @media (max-width: 768px) {
+            @include m_host;
+            line-height: 16px;
+        }
+    }
+    
     &-picture {
         width: 64px;
         height: 64px;
         background-color: lightgray;
         border-radius: 50%;
+    
+        @media (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+        }
     }
 }

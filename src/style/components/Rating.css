@@ -6,4 +6,12 @@
   .rating {
     align-items: center;
   }
+}
+.rating-icon {
+  height: 30px;
+}
+@media (max-width: 768px) {
+  .rating-icon {
+    height: 15px;
+  }
 }/*# sourceMappingURL=Rating.css.map */
