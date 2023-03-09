@@ -1,6 +1,6 @@
 import { Collapse } from '../components/Collapse'
 import styled from 'styled-components';
-import * as typography from '../utils/typography';
+import * as typography from '../style/typography';
 import image from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import about from '../data/about.json'
 

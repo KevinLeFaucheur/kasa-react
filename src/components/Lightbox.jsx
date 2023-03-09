@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as typography from '../utils/typography'
+import * as typography from '../style/typography'
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";

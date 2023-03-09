@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as typography from '../utils/typography';
+import * as typography from '../style/typography';
 import colors from "../style/colors";
 
 const StyledTag = styled.div`

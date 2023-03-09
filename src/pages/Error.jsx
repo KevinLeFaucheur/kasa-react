@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../style/colors";
-import * as typography from '../utils/typography';
+import * as typography from '../style/typography';
 
 const ErrorWrapper = styled.div`
     display: flex;

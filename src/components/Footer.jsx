@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import colors from "../style/colors";
-import * as typography from '../utils/typography';
+import * as typography from '../style/typography';
 import { KasaLogo } from "./KasaLogo";
 
 const StyledFooter = styled.footer`

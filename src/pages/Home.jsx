@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import colors from "../style/colors";
 // import logements from '../data/logements.json';
-
 import { Hero } from '../components/Hero'
 import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
-
 import { useFetch } from "../utils/utils";
 
 const HomeWrapper = styled.div`
