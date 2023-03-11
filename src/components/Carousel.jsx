@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const LightboxWrapper = styled.div`
+const CarouselWrapper = styled.div`
     position: relative;
     height: 415px;
     margin-bottom: 2rem;
@@ -59,7 +59,7 @@ const Image = styled.img`
     }
 `
 
-export const Lightbox = ({ imageArray }) => {
+export const Carousel = ({ imageArray }) => {
     const [index, setIndex] = useState(0);
 
     const handleIndex = (offset) => {
@@ -71,7 +71,7 @@ export const Lightbox = ({ imageArray }) => {
     }
 
     return (
-        <LightboxWrapper>
+        <CarouselWrapper>
             <Button onClick={() => handleIndex(-1) }>
                 <FontAwesomeIcon icon={faAngleLeft} />
             </Button>
@@ -80,6 +80,6 @@ export const Lightbox = ({ imageArray }) => {
                 <FontAwesomeIcon icon={faAngleRight} />
             </Button>
             <PageIndex>{index + 1}/{imageArray.length}</PageIndex>
-        </LightboxWrapper>
+        </CarouselWrapper>
     )    
 }

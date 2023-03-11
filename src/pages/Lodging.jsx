@@ -7,7 +7,7 @@ import { Collapse } from "../components/Collapse";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
 import { Profile } from "../components/Profile";
-import { Lightbox } from "../components/Lightbox";
+import { Carousel } from "../components/Carousel";
 import { useFetch } from "../utils/utils";
 // import logements from '../data/logements.json';
 
@@ -101,7 +101,7 @@ export const Lodging = () => {
 
   return logement && (
     <LodgingWrapper>
-      <Lightbox imageArray={logement.pictures} />
+      <Carousel imageArray={logement.pictures} />
       <LodgingHead>
         <LodgingLeftWrapper> 
           <h2>{logement.title}</h2>
