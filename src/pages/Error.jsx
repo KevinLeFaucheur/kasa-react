@@ -13,10 +13,10 @@ const ErrorWrapper = styled.div`
 
 const ErrorTitle = styled.h1`
     ${typography.d_error}
-    margin-bottom: 3vh;
+    margin: auto 0;
     
     @media (max-width: 768px) {
-        margin-bottom: 0.75rem;
+        margin: 10vh 0;
         ${typography.m_error}
     }
 `
@@ -35,6 +35,7 @@ const ErrorMessage = styled.p`
 const ErrorLink = styled(Link)`
     ${typography.d_errorLink}
     color: ${colors.primary};
+    margin-bottom: 5vh;
     
     && {
         text-decoration: underline;

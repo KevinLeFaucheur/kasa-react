@@ -39,8 +39,8 @@ const HeroTitle = styled.h1`
     @media (max-width: 768px) {
         top: 31px;
         left: 16px;
-        width: 50%;
-        line-height: 24px;
+        /* width: 50%; */
+        line-height: 48px;
         margin: 0;
         text-align: left;
         ${typography.m_hero}
